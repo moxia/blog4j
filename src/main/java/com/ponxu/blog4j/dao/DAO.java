@@ -66,7 +66,7 @@ public class DAO {
 	public static ThreadLocal<Connection> sConnThread = new ThreadLocal<Connection>();
 
 	private static String mysqlUrl(String host, int port, String dbName) {
-		return "jdbc:mysql://" + host + ":" + port + "/" + dbName;
+		return "jdbc:mysql://" + host + ":" + port + "/" + dbName + "?useUnicode=true&characterEncoding=utf8";
 	}
 
 	/** 主数据库 */
